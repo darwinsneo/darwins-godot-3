@@ -1,0 +1,834 @@
+[gd_scene load_steps=38 format=2]
+
+[ext_resource path="res://Main_Principal.gd" type="Script" id=1]
+[ext_resource path="res://Tiled/NES - Contra - Level 1.png" type="Texture" id=2]
+[ext_resource path="res://Sprite/Guile Idle.png" type="Texture" id=3]
+[ext_resource path="res://Sprite/guile_caminando.png" type="Texture" id=4]
+[ext_resource path="res://Animaciones/guile_idle.tres" type="Animation" id=5]
+[ext_resource path="res://Animaciones/guile_salto.tres" type="Animation" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 367.56, 2.28244 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 46.4004, 1.31015 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 15.5836, 1.59253 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 15.4249, 1.7171 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 30.4881, 1.41293 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 46.3211, 1.67783 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 29.6002, 1.58929 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 79.0506, 1.74142 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 126.47, 1.90509 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 47.9021, 1.45226 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 30.4246, 1.67 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 111.385, 2.65504 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 95.9968, 2.50621 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 31.6617, 1.1774 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 256.139, 2.23985 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 111.052, 2.3241 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 79.3243, 2.32409 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 15.3804, 2.09087 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 47.1993, 1.65964 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 30.9604, 1.8774 )
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 47.0806, 2.34756 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 14.7908, 1.98384 )
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 80.0884, 1.57027 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 15.3833, 2.1225 )
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 30.6931, 2.24858 )
+
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 61.4272, 2.03463 )
+
+[sub_resource type="RectangleShape2D" id=27]
+extents = Vector2( 49.0623, 1.28969 )
+
+[sub_resource type="RectangleShape2D" id=28]
+extents = Vector2( 14.8254, 1.90495 )
+
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 162.92, 1.86208 )
+
+[sub_resource type="CapsuleShape2D" id=30]
+radius = 92.5044
+height = 245.051
+
+[sub_resource type="Animation" id=31]
+resource_name = "guile_caminando"
+length = 0.37
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Spr:vframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Spr:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Spr:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Spr:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4 ]
+}
+
+[node name="Main_Principal" type="Node2D"]
+script = ExtResource( 1 )
+gravedad = 6000.0
+Vel_Movimiento = 4000.0
+Vel_Salto = 6000.0
+
+[node name="Background" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 1506.94, 250.472 )
+scale = Vector2( 1, 1.82401 )
+texture = ExtResource( 2 )
+
+[node name="suelo" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( -1328.8, -12.4242 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo2" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( -1521.41, 18.9198 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo2"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo3" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( -1456.64, 50.2152 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo3"]
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo4" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( -1360.94, 50.3673 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo4"]
+shape = SubResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo5" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( -1281.33, 17.3666 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo5"]
+shape = SubResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo6" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( -1408.87, 81.293 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo6"]
+shape = SubResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo7" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( -1041.02, 34.6288 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo7"]
+shape = SubResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo8" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( -1089.3, 81.4176 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo8"]
+shape = SubResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo9" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( -753.719, -12.804 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo9"]
+shape = SubResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo10" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( -416.349, -13.2396 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo10"]
+shape = SubResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo11" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( -272.743, 82.47 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo11"]
+shape = SubResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo12" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( -192.903, 33.9073 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo12"]
+shape = SubResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo13" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( -14.668, 19.1607 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo13"]
+shape = SubResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo14" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 94.5292, 81.3529 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo14"]
+shape = SubResource( 13 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo15" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 222.768, 49.8521 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo15"]
+shape = SubResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo16" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 319.586, 49.8521 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo16"]
+shape = SubResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo17" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( -95.9397, -44.1139 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo17"]
+shape = SubResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo18" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 241.455, -12.9065 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo18"]
+shape = SubResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo19" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 399.505, -44.5405 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo19"]
+shape = SubResource( 17 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo20" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 399.505, -44.5405 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo20"]
+shape = SubResource( 17 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo21" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 400.895, 34.7064 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo21"]
+shape = SubResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo22" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 496.333, 18.5959 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo22"]
+shape = SubResource( 19 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo23" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 544.396, -13.6341 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo23"]
+shape = SubResource( 20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo24" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 641.316, 17.7249 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo24"]
+shape = SubResource( 20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo25" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 672.299, -14.5051 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo25"]
+shape = SubResource( 20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo26" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 768.425, 17.7249 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo26"]
+shape = SubResource( 20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo27" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 895.534, -12.9922 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo27"]
+shape = SubResource( 20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo28" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 927.311, -44.6262 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo28"]
+shape = SubResource( 20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo29" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 1023.9, -12.763 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo29"]
+shape = SubResource( 20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo30" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 816.246, 49.0687 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo30"]
+shape = SubResource( 21 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo31" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 944.95, 34.5201 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo31"]
+shape = SubResource( 22 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo32" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 1102.88, 17.3961 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo32"]
+shape = SubResource( 23 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo33" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 752.32, 81.8649 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo33"]
+shape = SubResource( 24 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo34" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 911.564, 82.0718 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo34"]
+shape = SubResource( 24 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo35" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 1167.53, 81.5089 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo35"]
+shape = SubResource( 25 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo36" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 1280.01, 49.1872 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo36"]
+shape = SubResource( 25 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo37" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 1376.38, 17.4099 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo37"]
+shape = SubResource( 25 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo38" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 1470.94, -12.6709 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo38"]
+shape = SubResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo39" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 1488.42, 33.9709 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo39"]
+shape = SubResource( 27 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo40" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 1551.89, 17.7151 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo40"]
+shape = SubResource( 28 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo41" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 1583.86, 49.7186 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo41"]
+shape = SubResource( 28 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="suelo42" type="StaticBody2D" parent="Background" groups=[
+"suelo",
+]]
+editor/display_folded = true
+position = Vector2( 1572.78, 81.552 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/suelo42"]
+shape = SubResource( 29 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="cuerpo_j1" type="KinematicBody2D" parent="." groups=[
+"player",
+]]
+position = Vector2( -176.37, 170.847 )
+scale = Vector2( 0.1, 0.1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Spr" type="Sprite" parent="cuerpo_j1"]
+position = Vector2( 439.387, -906.259 )
+scale = Vector2( 24.5583, 26.2015 )
+texture = ExtResource( 3 )
+hframes = 3
+frame = 2
+
+[node name="col" type="CollisionShape2D" parent="cuerpo_j1"]
+position = Vector2( 2.47583, 1.45898 )
+shape = SubResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="pos_text" type="Container" parent="cuerpo_j1"]
+margin_left = -17.064
+margin_top = -17.064
+margin_right = 22.936
+margin_bottom = 22.936
+
+[node name="Time_escudo" type="Timer" parent="cuerpo_j1"]
+
+[node name="Camera2D" type="Camera2D" parent="cuerpo_j1"]
+current = true
+zoom = Vector2( 0.3, 0.3 )
+
+[node name="anim_j1" type="AnimationPlayer" parent="cuerpo_j1"]
+anims/guile_caminando = SubResource( 31 )
+anims/guile_idle = ExtResource( 5 )
+anims/guile_salto = ExtResource( 6 )
